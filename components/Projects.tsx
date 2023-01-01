@@ -4,11 +4,12 @@ import projectImage from '../public/Ecommerce.png'
 import { motion } from 'framer-motion'
 import { Project } from '../typing'
 import { urlFor } from '../sanity'
+import Link from 'next/link'
 type Props = {
-    projects:Project[]
+    projects: Project[]
 }
 
-const Projects = ({projects}: Props) => {
+const Projects = ({ projects }: Props) => {
     return (
         <motion.div
             className='relative h-screen flex flex-col text-left max-w-full justify-evenly mx-auto items-center z-0 mb-36'
@@ -56,7 +57,7 @@ const Projects = ({projects}: Props) => {
                                     transition={{
                                         duration: 1.2
                                     }}
-                                    viewport={{once:true}}
+                                    viewport={{ once: true }}
                                 >
                                     <Image
                                         src={urlFor(prj.image).url()}
@@ -64,9 +65,12 @@ const Projects = ({projects}: Props) => {
                                         width={300}
                                         height={300}
                                     />
-                                    <h3 className='underline font-bold text-2xl md:text-3xl mt-6'>
-                                        {prj.title}
-                                    </h3>
+                                    <Link href={prj.linkToBuild || "/"}>
+                                        <h3 className='underline font-bold text-2xl md:text-3xl mt-6'>
+                                            {prj.title}
+                                        </h3>
+                                    </Link>
+
                                 </motion.div>
 
                                 <p className='tracking-wider md:text-lg text-center md:text-left max-w-3xl mx-auto'>

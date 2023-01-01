@@ -25,6 +25,7 @@ function Hero({pageInfo }: Props) {
         width={100}
         height={100}
         className=" rounded-full"
+        priority
       />
       <div className='z-20 px-2'>
         <h2 className=' text-sm text-gray-400 uppercase pb-10 tracking-[15px]'>{pageInfo.role}</h2>

@@ -9,11 +9,7 @@ import Skills from "../components/Skills"
 import Projects from "../components/Projects"
 import Contact from "../components/Contact"
 import { Experience, PageInfo, Project, Skill, Social } from "../typing"
-import { fetchSkills } from "../utils/fetchSkills"
-import { fetchExperiences } from "../utils/fetchExperiences"
-import { fetchPageInfo } from "../utils/getPageInfo"
-import { fetchSocials } from "../utils/fetchSocials"
-import { fetchProjects } from "../utils/fetchProjects"
+import {fetchExperiences, fetchPageInfo, fetchProjects, fetchSkills, fetchSocials} from "../services/index"
 import { urlFor } from "../sanity"
 import Link from "next/link"
 
@@ -35,6 +31,7 @@ const Home: NextPage<{
     scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-red-400/80">
         <Head>
           <title>Abdullah&apos;s Portfolio</title>
+          <meta name="description" content="Abdullahi's portfolio" />
         </Head>
 
         <Header socials={socials} />
