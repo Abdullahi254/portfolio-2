@@ -64,6 +64,7 @@ const Projects = ({ projects }: Props) => {
                                         alt='project image'
                                         width={300}
                                         height={300}
+                                        priority
                                     />
                                     <Link href={prj.linkToBuild || "/"}>
                                         <h3 className='underline font-bold text-2xl md:text-3xl mt-6'>
